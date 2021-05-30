@@ -1,0 +1,616 @@
+
+  	<!DOCTYPE html>
+  	<html lang="en">
+  		<head>
+  			<meta charset="UTF-8" />
+  			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  			<link rel="preconnect" href="https://fonts.gstatic.com" />
+  			<link
+  				href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+  				rel="stylesheet"
+  			/>
+  			<title>Квитанции</title>
+  		</head>
+  		<style>
+  		h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+}
+body {
+	padding: 0;
+	margin: 0;
+	display: flex;
+
+	min-height: 100vh;
+	min-width: 100vw;
+	height: 100%;
+	width: 100%;
+	font-family: "Montserrat", sans-serif;
+}
+.receipt {
+	/* width: 595px; */
+	/* height: 842px; */
+	width: 100%;
+	height: 100%;
+	padding: 10px 0px;
+	overflow: auto;
+}
+.receipt__item {
+	border-bottom: 1px solid #000;
+	padding: 3px 0;
+}
+.receipt-header,
+.receipt-footer {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 5px;
+}
+.receipt-footer {
+	margin-bottom: 0;
+}
+.header__item,
+.footer__item {
+	margin-right: 13px;
+}
+.header__item:last-child,
+.footer__item:last-child {
+	margin-right: 0;
+}
+.header__item,
+.footer__item {
+	font-size: 12px;
+}
+.h-value,
+.f-value {
+	font-weight: 700;
+}
+
+.table-name {
+	text-align: center;
+	font-size: 12px;
+}
+.table {
+	font-size: 12px;
+}
+.table.col-count-4 .t-col {
+	width: 25%;
+}
+.table.col-count-3 .t-col {
+	width: 33.3333%;
+}
+.table.col-count-2 .t-col {
+	width: 50%;
+}
+.table.col-count-1 .t-col {
+	width: 100%;
+}
+.t-row {
+	display: flex;
+}
+.t-col {
+	text-align: center;
+	border-right: 1px solid #e2e2e2;
+	height: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.t-col:last-child {
+	border-right: 0;
+}
+.t-headers {
+	border-top: 1px solid #e2e2e2;
+}
+.t-row {
+	border-bottom: 1px solid #e2e2e2;
+}
+.control__item {
+	margin-bottom: 15px;
+}
+.controller-name {
+	font-size: 13px;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+
+  		</style>
+  		<body>
+  			<div class="receipt">
+  				<div class="receipt__item">
+		<div class="receipt-header">
+		<div class="header__item">
+			<span class="h-name">Номер счётчика</span>:
+			<span class="h-value">1</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Адрес квартиры со счётчиком</span>:
+			<span class="h-value">Суворова 8, кв. 6</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">ФИО владельца</span>:
+			<span class="h-value">Иванов Александр Иванович</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Дата установки</span>:
+			<span class="h-value">14/12/2020</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Начальные показания</span>:
+			<span class="h-value">5021      </span>
+		</div>
+	</div>
+	<div class="receipt-body">
+		
+			<h3 class="table-name">Оплаченные квитанции</h3>
+			<div class="table col-count-3">
+				<div class="t-row t-headers">
+					<div class="t-col">Показания счётчика</div>
+					<div class="t-col">Дата оплаты</div>
+					<div class="t-col">Сумма оплаты</div>
+				</div>
+		
+				<div class="t-row">
+					<div class="t-col">5122</div>
+					<div class="t-col">14/12/2020</div>
+					<div class="t-col">610</div>
+				</div>
+			
+				<div class="t-row">
+					<div class="t-col">5223</div>
+					<div class="t-col">14/01/2021</div>
+					<div class="t-col">620</div>
+				</div>
+			
+				<div class="t-row">
+					<div class="t-col">58</div>
+					<div class="t-col">14/02/2021</div>
+					<div class="t-col">5256</div>
+				</div>
+			
+		</div>
+		
+	</div>
+	<div class="receipt-footer">
+		<div class="footer__item">
+			<span class="f-name">Общая сумма оплаты</span>:
+			<span class="f-value">6486</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name">Стоимость 1кВт</span>:
+			<span class="f-value">-1.31</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name"
+				>Разность между последним и первым показаниями счётчика</span
+			>:
+			<span class="f-value">-4963</span>
+		</div>
+	</div>
+    </div><div class="receipt__item">
+		<div class="receipt-header">
+		<div class="header__item">
+			<span class="h-name">Номер счётчика</span>:
+			<span class="h-value">2</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Адрес квартиры со счётчиком</span>:
+			<span class="h-value">Школьная 3, кв. 33</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">ФИО владельца</span>:
+			<span class="h-value">Сергеев Алексей Александрович</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Дата установки</span>:
+			<span class="h-value">19/12/2020</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Начальные показания</span>:
+			<span class="h-value">4341      </span>
+		</div>
+	</div>
+	<div class="receipt-body">
+		
+			<h3 class="table-name">Оплаченные квитанции</h3>
+			<div class="table col-count-3">
+				<div class="t-row t-headers">
+					<div class="t-col">Показания счётчика</div>
+					<div class="t-col">Дата оплаты</div>
+					<div class="t-col">Сумма оплаты</div>
+				</div>
+		
+				<div class="t-row">
+					<div class="t-col">2691</div>
+					<div class="t-col">19/01/2021</div>
+					<div class="t-col">2234</div>
+				</div>
+			
+		</div>
+		
+	</div>
+	<div class="receipt-footer">
+		<div class="footer__item">
+			<span class="f-name">Общая сумма оплаты</span>:
+			<span class="f-value">2234</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name">Стоимость 1кВт</span>:
+			<span class="f-value">-1.35</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name"
+				>Разность между последним и первым показаниями счётчика</span
+			>:
+			<span class="f-value">-1650</span>
+		</div>
+	</div>
+    </div><div class="receipt__item">
+		<div class="receipt-header">
+		<div class="header__item">
+			<span class="h-name">Номер счётчика</span>:
+			<span class="h-value">3</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Адрес квартиры со счётчиком</span>:
+			<span class="h-value">Лесная 23, кв. 12</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">ФИО владельца</span>:
+			<span class="h-value">Супрун Мария Юрьевная</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Дата установки</span>:
+			<span class="h-value">20/12/2020</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Начальные показания</span>:
+			<span class="h-value">6210      </span>
+		</div>
+	</div>
+	<div class="receipt-body">
+		
+			<h3 class="table-name">Оплаченные квитанции</h3>
+			<div class="table col-count-3">
+				<div class="t-row t-headers">
+					<div class="t-col">Показания счётчика</div>
+					<div class="t-col">Дата оплаты</div>
+					<div class="t-col">Сумма оплаты</div>
+				</div>
+		
+				<div class="t-row">
+					<div class="t-col">7121</div>
+					<div class="t-col">20/01/2021</div>
+					<div class="t-col">4490</div>
+				</div>
+			
+		</div>
+		
+	</div>
+	<div class="receipt-footer">
+		<div class="footer__item">
+			<span class="f-name">Общая сумма оплаты</span>:
+			<span class="f-value">4490</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name">Стоимость 1кВт</span>:
+			<span class="f-value">4.93</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name"
+				>Разность между последним и первым показаниями счётчика</span
+			>:
+			<span class="f-value">911</span>
+		</div>
+	</div>
+    </div><div class="receipt__item">
+		<div class="receipt-header">
+		<div class="header__item">
+			<span class="h-name">Номер счётчика</span>:
+			<span class="h-value">4</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Адрес квартиры со счётчиком</span>:
+			<span class="h-value">Строителей 2, кв. 49</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">ФИО владельца</span>:
+			<span class="h-value">Фомин Анатолий Алексеевич</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Дата установки</span>:
+			<span class="h-value">09/11/2020</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Начальные показания</span>:
+			<span class="h-value">1210      </span>
+		</div>
+	</div>
+	<div class="receipt-body">
+		
+			<h3 class="table-name">Оплаченные квитанции</h3>
+			<div class="table col-count-3">
+				<div class="t-row t-headers">
+					<div class="t-col">Показания счётчика</div>
+					<div class="t-col">Дата оплаты</div>
+					<div class="t-col">Сумма оплаты</div>
+				</div>
+		
+				<div class="t-row">
+					<div class="t-col">1402</div>
+					<div class="t-col">09/12/2020</div>
+					<div class="t-col">1000</div>
+				</div>
+			
+				<div class="t-row">
+					<div class="t-col">1952</div>
+					<div class="t-col">09/01/2021</div>
+					<div class="t-col">2783</div>
+				</div>
+			
+		</div>
+		
+	</div>
+	<div class="receipt-footer">
+		<div class="footer__item">
+			<span class="f-name">Общая сумма оплаты</span>:
+			<span class="f-value">3783</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name">Стоимость 1кВт</span>:
+			<span class="f-value">5.10</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name"
+				>Разность между последним и первым показаниями счётчика</span
+			>:
+			<span class="f-value">742</span>
+		</div>
+	</div>
+    </div><div class="receipt__item">
+		<div class="receipt-header">
+		<div class="header__item">
+			<span class="h-name">Номер счётчика</span>:
+			<span class="h-value">5</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Адрес квартиры со счётчиком</span>:
+			<span class="h-value">Суворова 9, кв. 49</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">ФИО владельца</span>:
+			<span class="h-value">Медведев Владимир Анатольевич</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Дата установки</span>:
+			<span class="h-value">28/10/2020</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Начальные показания</span>:
+			<span class="h-value">3349      </span>
+		</div>
+	</div>
+	<div class="receipt-body">
+		
+			<h3 class="table-name">Оплаченные квитанции</h3>
+			<div class="table col-count-3">
+				<div class="t-row t-headers">
+					<div class="t-col">Показания счётчика</div>
+					<div class="t-col">Дата оплаты</div>
+					<div class="t-col">Сумма оплаты</div>
+				</div>
+		
+				<div class="t-row">
+					<div class="t-col">3851</div>
+					<div class="t-col">28/11/2020</div>
+					<div class="t-col">1900</div>
+				</div>
+			
+				<div class="t-row">
+					<div class="t-col">4361</div>
+					<div class="t-col">28/12/2020</div>
+					<div class="t-col">2100</div>
+				</div>
+			
+				<div class="t-row">
+					<div class="t-col">4901</div>
+					<div class="t-col">28/01/2021</div>
+					<div class="t-col">1920</div>
+				</div>
+			
+		</div>
+		
+	</div>
+	<div class="receipt-footer">
+		<div class="footer__item">
+			<span class="f-name">Общая сумма оплаты</span>:
+			<span class="f-value">5920</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name">Стоимость 1кВт</span>:
+			<span class="f-value">3.81</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name"
+				>Разность между последним и первым показаниями счётчика</span
+			>:
+			<span class="f-value">1552</span>
+		</div>
+	</div>
+    </div><div class="receipt__item">
+		<div class="receipt-header">
+		<div class="header__item">
+			<span class="h-name">Номер счётчика</span>:
+			<span class="h-value">6</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Адрес квартиры со счётчиком</span>:
+			<span class="h-value">Мичуринская 63, кв. 75</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">ФИО владельца</span>:
+			<span class="h-value">Сидоров Петр Сергеевич</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Дата установки</span>:
+			<span class="h-value">17/11/2020</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Начальные показания</span>:
+			<span class="h-value">3095      </span>
+		</div>
+	</div>
+	<div class="receipt-body">
+		
+			<h3 class="table-name">Оплаченные квитанции</h3>
+			<div class="table col-count-3">
+				<div class="t-row t-headers">
+					<div class="t-col">Показания счётчика</div>
+					<div class="t-col">Дата оплаты</div>
+					<div class="t-col">Сумма оплаты</div>
+				</div>
+		
+		</div>
+		
+	</div>
+	<div class="receipt-footer">
+		<div class="footer__item">
+			<span class="f-name">Общая сумма оплаты</span>:
+			<span class="f-value">0</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name">Стоимость 1кВт</span>:
+			<span class="f-value">0</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name"
+				>Разность между последним и первым показаниями счётчика</span
+			>:
+			<span class="f-value">0</span>
+		</div>
+	</div>
+    </div><div class="receipt__item">
+		<div class="receipt-header">
+		<div class="header__item">
+			<span class="h-name">Номер счётчика</span>:
+			<span class="h-value">149</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Адрес квартиры со счётчиком</span>:
+			<span class="h-value">Школьная 5а, кв. 13</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">ФИО владельца</span>:
+			<span class="h-value">Петров Сергей Иванович</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Дата установки</span>:
+			<span class="h-value">12/11/2020</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Начальные показания</span>:
+			<span class="h-value">180       </span>
+		</div>
+	</div>
+	<div class="receipt-body">
+		
+			<h3 class="table-name">Оплаченные квитанции</h3>
+			<div class="table col-count-3">
+				<div class="t-row t-headers">
+					<div class="t-col">Показания счётчика</div>
+					<div class="t-col">Дата оплаты</div>
+					<div class="t-col">Сумма оплаты</div>
+				</div>
+		
+		</div>
+		
+	</div>
+	<div class="receipt-footer">
+		<div class="footer__item">
+			<span class="f-name">Общая сумма оплаты</span>:
+			<span class="f-value">0</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name">Стоимость 1кВт</span>:
+			<span class="f-value">0</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name"
+				>Разность между последним и первым показаниями счётчика</span
+			>:
+			<span class="f-value">0</span>
+		</div>
+	</div>
+    </div><div class="receipt__item">
+		<div class="receipt-header">
+		<div class="header__item">
+			<span class="h-name">Номер счётчика</span>:
+			<span class="h-value">150</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Адрес квартиры со счётчиком</span>:
+			<span class="h-value">Варкаусса 7, кв. 31</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">ФИО владельца</span>:
+			<span class="h-value">Степанова Людмила Викторовная</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Дата установки</span>:
+			<span class="h-value">27/11/2020</span>
+		</div>
+		<div class="header__item">
+			<span class="h-name">Начальные показания</span>:
+			<span class="h-value">560       </span>
+		</div>
+	</div>
+	<div class="receipt-body">
+		
+			<h3 class="table-name">Оплаченные квитанции</h3>
+			<div class="table col-count-3">
+				<div class="t-row t-headers">
+					<div class="t-col">Показания счётчика</div>
+					<div class="t-col">Дата оплаты</div>
+					<div class="t-col">Сумма оплаты</div>
+				</div>
+		
+		</div>
+		
+	</div>
+	<div class="receipt-footer">
+		<div class="footer__item">
+			<span class="f-name">Общая сумма оплаты</span>:
+			<span class="f-value">0</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name">Стоимость 1кВт</span>:
+			<span class="f-value">0</span>
+		</div>
+		<div class="footer__item">
+			<span class="f-name"
+				>Разность между последним и первым показаниями счётчика</span
+			>:
+			<span class="f-value">0</span>
+		</div>
+	</div>
+    </div>
+					<div class="receipt-footer">
+					<div class="footer__item">
+						<span class="f-name">Количество счётчиков</span>:
+						<span class="f-value">8</span>
+						<span class="f-name">Общая вырученная сумма</span>:
+						<span class="f-value">22913</span>
+					</div>
+				</div>
+  			</div>
+  		</body>
+  	</html>
+  	

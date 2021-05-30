@@ -1,0 +1,29 @@
+.counters-header {
+	position: relative;
+}
+
+.counters-reload__btn {
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #fff;
+	cursor: pointer;
+}
+
+.counters-reload__btn:hover {
+	text-decoration: underline;
+}
+
+.main-open {
+	position: absolute;
+	left: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #fff;
+	cursor: pointer;
+}
+
+.main-open:hover {
+	text-decoration: underline;
+}

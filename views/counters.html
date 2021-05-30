@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Счётчики</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+    <link rel="stylesheet" href="../src/style/general.css" />
+    <link rel="stylesheet" href="../src/style/counters.css" />
+  </head>
+
+  <body style="background: white">
+    <div class="window__wrapper">
+      <header class="window__header counters-header">
+        <span class="main-open">Назад</span>
+        <h1 class="window__title">Счётчики</h1>
+        <span class="counters-reload__btn">Обновить</span>
+      </header>
+      <section class="window__main">
+        <h2 class="window__subtitle">Данные о счётчиках</h2>
+        <div class="window__body">
+          <div class="window__table wtable wtable-main">
+            <div class="wtable__row wtable__headers">
+              <div class="wtable__col">Номер счётчика</div>
+              <div class="wtable__col">Адрес</div>
+              <div class="wtable__col">ФИО владельца</div>
+            </div>
+            <div class="wtable__body"></div>
+          </div>
+        </div>
+        <button class="window__button">Добавить счётчик</button>
+      </section>
+    </div>
+    <script src="../src/script/counters.js"></script>
+  </body>
+</html>

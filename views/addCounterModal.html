@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style/general.css" />
+    <title>Document</title>
+  </head>
+  <body style="background: white">
+    <div class="window_wrapper">
+      <header class="window__header">
+        <h1 class="window__title">Новый счётчик</h1>
+        <span class="window__close">&times;</span>
+      </header>
+      <section class="window__main">
+        <h2 class="window__subtitle">Добавить новый счётчик в базу данных</h2>
+        <form class="window-input add-counter-form">
+          <div class="window-input__item">
+            <label for="txtMeterNumber">Номер счётчика</label>
+            <input type="text" name="txtMeterNumber" id="txtMeterNumber" />
+          </div>
+          <div class="window-input__item">
+            <label for="txtMeterAddres">Адрес квартиры со счётчиком</label>
+            <input type="text" name="txtMeterAddres" id="txtMeterAddres" />
+          </div>
+          <div class="window-input__item">
+            <label for="txtMeterOwner">ФИО владельца квартиры</label>
+            <input type="text" name="txtMeterOwner" id="txtMeterOwner" />
+          </div>
+          <div class="window-input__item">
+            <label for="datMeterBegin">Дата установки счётчика</label>
+            <input type="date" name="datMeterBegin" id="datMeterBegin" />
+          </div>
+          <div class="window-input__item">
+            <label for="txtMeterBeginValue">Начальные показания счётчика</label>
+            <input
+              type="text"
+              name="txtMeterBeginValue"
+              id="txtMeterBeginValue"
+            />
+          </div>
+          <div class="window-input__item">
+            <label for="intMeterControlCount"
+              >Количество проведенных проверок счетчика</label
+            >
+            <input
+              type="number"
+              name="intMeterControlCount"
+              id="intMeterControlCount"
+            />
+          </div>
+          <div class="window-input__item">
+            <label for="fltMeterSum">Выплаченная сумма за электроэнергию</label>
+            <input type="number" name="fltMeterSum" id="fltMeterSum" />
+          </div>
+          <div class="window__button-wrapper many">
+            <button class="window__button add-counter-btn" type="submit">
+              Добавить счётчик
+            </button>
+            <button class="window__button cancel-btn">Отмена</button>
+          </div>
+        </form>
+      </section>
+    </div>
+    <script src="../src/script/modalError.js"></script>
+    <script src="../src/script/addCounter.js"></script>
+  </body>
+</html>

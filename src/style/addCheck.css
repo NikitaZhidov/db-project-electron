@@ -1,0 +1,14 @@
+form {
+	margin-top: 50px;
+}
+
+select {
+	width: 490px;
+	height: 35px;
+}
+
+input {
+	width: 490px;
+	height: 35px;
+	padding: 0;
+}

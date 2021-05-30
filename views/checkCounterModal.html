@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style/general.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="window_wrapper">
+      <header class="window__header">
+        <h1 class="window__title">Новый счётчик</h1>
+        <span class="window__close">&times;</span>
+      </header>
+
+      <section class="window__main">
+        <h2 class="window__subtitle">Проверка счётчика</h2>
+        <div class="window-info"></div>
+        <h1 class="wtable-title">Проверки счётчика</h1>
+        <div class="window__table wtable wtable-modal">
+          <div class="wtable__row wtable__headers">
+            <div class="wtable__col">Показания</div>
+            <div class="wtable__col">Дата проверки</div>
+            <div class="wtable__col">ФИО контроллёра</div>
+            <div class="wtable__col">Должность контроллёра</div>
+          </div>
+          <div class="wtable__body"></div>
+        </div>
+        <button class="window__button add-check-btn" type="submit">
+          Добавить проверку
+        </button>
+      </section>
+    </div>
+    <script src="../src/script/checkCounter.js"></script>
+  </body>
+</html>

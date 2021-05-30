@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style/general.css" />
+    <link rel="stylesheet" href="../src/style/addCheck.css" />
+    <title>Document</title>
+  </head>
+  <body style="background: white">
+    <div class="window_wrapper">
+      <header class="window__header">
+        <h1 class="window__title">Новая проверка</h1>
+        <span class="window__close">&times;</span>
+      </header>
+      <section class="window__main">
+        <div class="window-info"></div>
+        <section class="window__main">
+          <h2 class="window__subtitle">Добавить проверку</h2>
+          <form class="window-input add-check-form">
+            <div class="window-input__item">
+              <label for="intInspectorId">ФИО контроллёра</label>
+              <select name="intInspectorId" id="intInspectorId"></select>
+            </div>
+            <div class="window-input__item">
+              <label for="datControlDate">Дата проверки</label>
+              <input type="date" name="datControlDate" id="datControlDate" />
+            </div>
+            <div class="window-input__item">
+              <label for="txtMeterControlValue">Показания счётчика</label>
+              <input
+                type="text"
+                name="txtMeterControlValue"
+                id="txtMeterControlValue"
+              />
+            </div>
+            <div class="window__button-wrapper many">
+              <button class="window__button add-check-btn" type="submit">
+                Добавить проверку
+              </button>
+              <button class="window__button cancel-btn">Отмена</button>
+            </div>
+          </form>
+        </section>
+      </section>
+    </div>
+    <script src="../src/script/modalError.js"></script>
+    <script src="../src/script/addCheck.js"></script>
+  </body>
+</html>

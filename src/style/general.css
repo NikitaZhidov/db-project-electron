@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #f3f3f3;
+	font-family: "Montserrat", sans-serif;
+}
+
+button {
+	font-family: "Montserrat", sans-serif;
+	border: none;
+}
+
+button:focus {
+	outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+}
+
+.preloader {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.preloader-gif {
+	text-align: center;
+	max-width: 80px;
+}
+
+.window__header {
+	height: 70px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background-color: #ea4335;
+}
+
+.window__title {
+	font-weight: bold;
+	font-size: 22px;
+	color: #fff;
+}
+
+.window__subtitle {
+	font-size: 22px;
+	color: #000;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 200;
+	padding: 0;
+	margin: 0;
+
+	border-bottom: 1px solid #d3d3d3;
+}
+
+.window__close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.window__main {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: calc(100vh - 70px);
+}
+
+.window__body {
+	flex: 1 1 auto;
+	overflow: auto;
+	border-bottom: 1px solid #d3d3d3;
+}
+
+.window__button {
+	outline: none;
+	border: none;
+	background-color: #ea4335;
+	color: #fff;
+	font-family: "Montserrat", sans-serif;
+	text-align: center;
+
+	padding: 10px 125px;
+	cursor: pointer;
+	display: inline-block;
+	width: 500px;
+	height: 40px;
+	margin: 10px auto;
+
+	transition: background 0.2s ease-in;
+}
+
+.window__button:disabled {
+	background-color: #d38079;
+}
+
+.window__button:focus .window__button:active .window__button:hover {
+	outline: none;
+}
+
+.window__button:hover {
+	background: #b33429;
+}
+
+.window__button:active {
+	background-color: #df958f;
+}
+
+.wtable {
+	width: 100%;
+	height: 100%;
+}
+
+.wtable-main {
+	font-size: 16px;
+}
+
+.wtable__row {
+	display: flex;
+	border-bottom: 1px solid #d3d3d3;
+}
+
+.wtable__headers {
+	border-top: 1px solid #d3d3d3;
+}
+
+.wtable__col {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-right: 1px solid #d3d3d3;
+	text-align: center;
+}
+
+.wtable__col:last-child {
+	border-right: none;
+}
+
+.wtable-main .wtable__col {
+	width: 33%;
+	padding: 5px 0;
+	min-height: 50px;
+}
+
+.wtable-main .wtable__headers {
+	border-top: 0;
+}
+
+.wtable__body {
+	width: 100%;
+	height: 100%;
+}
+
+.wtable__row.data-row:hover {
+	background-color: #e2e2e2;
+	cursor: pointer;
+}
+
+.window-input__item {
+	display: flex;
+	margin: 11px auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.window-input__item input {
+	width: 490px;
+	height: 35px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+
+.window-input__item input:focus {
+	border: 1px solid #d46f65;
+	outline: none;
+}
+
+.window-input__item label {
+	margin-right: 25px;
+	color: #424242;
+	font-size: 12px;
+	text-align: center;
+	width: 155px;
+}
+
+.window__button-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.window__button-wrapper.many {
+	justify-content: space-around;
+}
+
+.window__button-wrapper.many button {
+	max-width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	white-space: nowrap;
+}
+
+.modal-error {
+	background-color: #ffb1b1;
+	color: #8a0202;
+	position: absolute;
+	padding: 10px;
+	right: 5%;
+	top: 15%;
+	font-size: 10px;
+	min-width: 100px;
+	text-align: center;
+	border-radius: 5px;
+	opacity: 0;
+	visibility: hidden;
+
+	transition: all 0.3s ease-in-out;
+}
+
+.modal-error.active {
+	top: 20%;
+	opacity: 1;
+	visibility: visible;
+}
+
+.data-row {
+	user-select: none;
+}
+
+.window-info {
+	width: 75%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.window-info__elem {
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 13px;
+	font-family: Montserrat;
+}
+
+.wtable-modal {
+	font-size: 12px;
+	overflow: auto;
+}
+
+.wtable-modal .wtable__col {
+	width: 25%;
+	padding: 3px 0;
+	min-height: 30px;
+}
+
+.wtable-title {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+.loader-window {
+	background-color: rgba(0, 0, 0, 0.349);
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

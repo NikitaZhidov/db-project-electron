@@ -1,0 +1,23 @@
+.main-menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+	margin-top: 150px;
+}
+
+.main-menu .window__button {
+	font-size: 20px;
+}
+
+.penalties-report-btn {
+	margin-bottom: 0;
+}
+
+#intInspectorId {
+	width: 46.3%;
+	margin: 0 auto;
+	padding: 8px;
+}
